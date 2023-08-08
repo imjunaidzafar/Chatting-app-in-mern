@@ -30,5 +30,5 @@ mongoose
     console.log("Database Connected!");
   })
   .catch((err) => {
-    console.log("message", err.message);
+    console.log("message:", err.message, "Not Connected...");
   });

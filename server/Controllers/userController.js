@@ -39,9 +39,9 @@ const registerUser = async (req, res) => {
     const token = createToken(user._id);
 
     res.status(200).json({ _id: user._id, name, email, token });
-  } catch (err) {
-    console.log("Error", err);
-    res.status(500).json(err.message);
+  } catch (error) {
+    console.log("Error", error);
+    res.status(500).json(error);
   }
 };
 
@@ -63,9 +63,9 @@ const loginUser = async (req, res) => {
     const token = createToken(user._id);
 
     res.status(200).json({ _id: user._id, name: user.name, email, token });
-  } catch (err) {
-    console.log("Error", err);
-    res.status(500).json(err.message);
+  } catch (error) {
+    console.log("Error", error);
+    res.status(500).json(error);
   }
 };
 
@@ -76,9 +76,9 @@ const findUser = async (req, res) => {
     const user = await userModel.findById(userId);
 
     res.status(200).json(user);
-  } catch (err) {
-    console.log("Error", err);
-    res.status(500).json(err.message);
+  } catch (error) {
+    console.log("Error", error);
+    res.status(500).json(error);
   }
 };
 
@@ -89,9 +89,9 @@ const getUsers = async (req, res) => {
     const users = await userModel.find();
 
     res.status(200).json(users);
-  } catch (err) {
-    console.log("Error", err);
-    res.status(500).json(err.message);
+  } catch (error) {
+    console.log("Error", error);
+    res.status(500).json(error);
   }
 };
 
