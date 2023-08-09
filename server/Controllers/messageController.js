@@ -30,7 +30,7 @@ const getMessages = async (req, res) => {
     const messages = await messageModel.find({ chatId });
     res.status(200).json(messages);
 
-    res.status(200).json(response);
+    // res.status(200).json(response);
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
