@@ -8,7 +8,7 @@ export const postRequest = async (url, body) => {
     },
     body,
   });
-  console.log("body", body);
+  
   const data = await response.json();
 
   if (!response.ok) {
